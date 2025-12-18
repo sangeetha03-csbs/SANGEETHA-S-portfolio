@@ -152,6 +152,7 @@ section p {
     width: 220px;
     transition: transform 0.3s;
     margin: auto;
+    color: #ffffff;
 }
 .cer-card.ctive {
     display: block;
@@ -197,8 +198,10 @@ footer {
 <div class="hero" id="home">
     <div class="hero-text">
         <h1>Hello, I'm <span>Sangeetha</span></h1>
-        <div class="typing" id="typing"></div>
         <p>
+            Cloud computing Ethusiast<br>
+            Data Analysis learner <br>
+            Future Tech Professional<br>
             I am passionate about cloud technologies and data-driven solutions.
         </p>
         <a href="#about" class="btn">More About Me</a>
@@ -235,13 +238,13 @@ I am interested in Cloud Computing and Data Analysis and continuously improve my
     <div class="cert-card">
         <img src="cloud-cert.jpg">
         <h3>Cloud Computing</h3>
-        <p>NPTEL</p>
+        <p>NPTEL Certification</p>
     </div>
 </section>
     <div class="cert-card">
         <img src="event-cert.jpg">
         <h3>Event Organizer</h3>
-        <p>Certified</p>
+        <p>Certification</p>
     </div>
 </div>
 </section>
@@ -252,46 +255,12 @@ I am interested in Cloud Computing and Data Analysis and continuously improve my
 <p>Email: <a href="mailto:sangeetha030107@gmail.com">sangeetha030107@gmail.com</a></p>
 <p>GitHub: <a href="#">https://sangeetha03-csbs.github.io/SANGEETHA-S-portfolio/</a></p>
 <p>Linkedin: <a href="#">https://www.linkedin.com/in/sangeetha-s-505317361</a></p>
-<p>contact: <a href="contact:9500090859"></a></p>                                                                                
+<p>contact: <a href="contact:9500090859">9500090858</a></p>                                                                                
 </section>
 
 <footer>
 © 2025 Sangeetha | Portfolio
 </footer>
-
-<!-- SCRIPT -->
-<script>
-const texts = [
-    "Cloud Computing Enthusiast",
-    "Data Analysis Learner",
-    "CSBS Student",
-    "Future Tech Professional"
-];
-
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type() {
-    if (count === texts.length) {
-        count = 0;
-    }
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
-
-    document.getElementById("typing").textContent = letter;
-
-    if (letter.length === currentText.length) {
-        setTimeout(() => {
-            index = 0;
-            count++;
-        }, 1500);
-    }
-
-    setTimeout(type, 120);
-})();
-</script>
 
 </body>
 </html>
