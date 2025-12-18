@@ -1,194 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Sangeetha | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: rgba(0, 0, 0, 0.4);
-        }
-        {
-        padding: 60px 40px;
-        text-align: center;
-    }
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+}
 
-    .cert-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin-top: 30px;
-    }
-        .cert-card:hover {
-        transform: scale(1.05);
-    }
+nav {
+    display: flex;
+    gap: 30px;
+}
 
-    .cert-card img {
-        width: 100%;
-        height: 140px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-    .cert-card h3 {
-        color: #8ab4f8;
-        margin-bottom: 5px;
-    }
+nav a:hover {
+    color: #8ab4f8;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+}
+
+.hero-text span {
+    color: #8ab4f8;
+}
+
+.typing {
+    font-size: 20px;
+    margin: 10px 0 20px;
+    color: #8ab4f8;
+    height: 24px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 28px;
+    background: #8ab4f8;
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* IMAGE */
+.hero img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #8ab4f8;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #8ab4f8;
+}
+
+section p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: rgba(0,0,0,0.4);
+    padding: 15px 25px;
+    border-radius: 25px;
+}
+
+/* CERTIFICATES */
+.cert-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.cert-card {
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    transition: transform 0.3s;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+}
+
+.cert-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTACT */
+.contact a {
+    color: #8ab4f8;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+}
 </style>
-
-        header h2 {
-            margin: 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #8ab4f8;
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 60px 40px;
-            flex-wrap: wrap;
-        }
-
-        .hero-text {
-            max-width: 500px;
-        }
-
-        .hero-text h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-
-        .hero-text span {
-            color: #8ab4f8;
-        }
-
-        .hero-text p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            background: #8ab4f8;
-            color: black;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: white;
-        }
-
-        .hero img {
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #8ab4f8;
-        }
-
-        section {
-            padding: 60px 40px;
-        }
-
-        section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        section p {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            line-height: 1.7;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h2>Portfolio</h2>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+<header>
+    <h2>Portfolio</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-text">
-            <h1>Hello, I'm <span>sangeetha</span></h1>
-            <h3>cloud computing & data analysis Enthusisast</h3>
-            <p>
-                I am passionate about cloud technologies and data drivensolutions.
-                I enjay learning how system scale in the cloud and how data can be analyzed to support better decision-making.
-            </p>
-            <a href="#about" class="btn">More About Me</a>
-        </div>
-
-        <img src="profile.jpg" alt="Profile Image">
-    </div>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
+<!-- HERO -->
+<div class="hero" id="home">
+    <div class="hero-text">
+        <h1>Hello, I'm <span>Sangeetha</span></h1>
+        <div class="typing" id="typing"></div>
         <p>
-             I am Sangeetha, currently pursuing my second year in the
-        Computer Science and Business Systems (CSBS) department at
-        Jerusalem College of Engineering. I have a strong interest
-        in Cloud Computing and Data Analysis, and I enjoy learning
-        how cloud platforms and data-driven technologies help solve
-        real-world problems. I am continuously developing my skills
-        through academic learning and practical experience.
+            I am passionate about cloud technologies and data-driven solutions.
         </p>
-    </section>
-    <section id="certificates">
-    <h2>Certificates</h2>
-
-    <div class="cert-container">
-        <div class="cert-card">
-             <img src="cloud-cert.jpg" alt="Cloud Computing Certificate">
-            <h3>Cloud Computing</h3>
-            <p>NPTEL Certification</p>
-        </div>
-            <div class="cert-card">
-            <img src="event-cert.jpg" alt="Event Organizer Certificate">
-            <h3>Event Organization</h3>
-            <p>Certified Event Organizer</p>
-        </div>
+        <a href="#about" class="btn">More About Me</a>
     </div>
+
+    <img src="profile.jpg" alt="Profile Image">
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am Sangeetha, currently pursuing my second year in Computer Science and Business Systems (CSBS) at Jerusalem College of Engineering.
+I am interested in Cloud Computing and Data Analysis and continuously improve my skills.
+</p>
 </section>
 
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+    <div class="skill">Cloud Computing</div>
+    <div class="skill">Data Analysis</div>
+    <div class="skill">HTML & CSS</div>
+    <div class="skill">Python</div>
+    <div class="skill">GitHub</div>
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section>
+<h2>Certificates</h2>
+<div class="cert-container">
+    <div class="cert-card">
+        <img src="cloud-cert.jpg">
+        <h3>Cloud Computing</h3>
+        <p>NPTEL</p>
+    </div>
+    <div class="cert-card">
+        <img src="event-cert.jpg">
+        <h3>Event Organizer</h3>
+        <p>Certified</p>
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<p>Email: <a href="mailto:sangeetha@gmail.com">sangeetha@gmail.com</a></p>
+<p>GitHub: <a href="#">github.com/sangeetha03</a></p>
+</section>
+
+<footer>
+© 2025 Sangeetha | Portfolio
+</footer>
+
+<!-- TYPING SCRIPT -->
+<script>
+const texts = [
+    "Cloud Computing Enthusiast",
+    "Data Analysis Learner",
+    "CSBS Student",
+    "Future Tech Professional"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+    if (count === texts.length) {
+        count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typing").textContent = letter;
+
+    if (letter.length === currentText.length) {
+        setTimeout(() => {
+            index = 0;
+            count++;
+        }, 1500);
+    }
+
+    setTimeout(type, 120);
+})();
+</script>
 
 </body>
 </html>
