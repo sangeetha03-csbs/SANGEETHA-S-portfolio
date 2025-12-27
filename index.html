@@ -4,24 +4,21 @@
 <meta charset="UTF-8">
 <title>Sangeetha | Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #1c1c1c;
     colour:#ffffff;
-   
-}
-   
-      /* HEADER */
+   }
+   /* HEADER */
 header {
     display: flex;
     justify-content: space-between;
-    
     padding: 40px 60px;
     position: sticky;
     top: 0;
+    background: #1c1c1c;
 }
 
 nav {
@@ -140,10 +137,10 @@ section p {
 /* SKILLS */
 .skills-container {
     display: flex;
-    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
+
 
 .skill {
     background: #dfff00;
@@ -155,14 +152,8 @@ section p {
     align-items: center;
     width: 120px;
 }
-    .skill img {
+.skill img {
     width: 60px;
-    height: 60px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-    .skill img:hover {
-    transform: scale(1.1);
 }
 
 .skill p {
@@ -171,37 +162,8 @@ section p {
 }
 
 
-/* CERTIFICATES */
-.cert-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-    gap: 25px;
-    flex-wrap: wrap;
-}
 
-.cert-card {
-    background: f9626c;
-    padding: 20px;
-    border-radius: 15px;
-    width: 220px;
-    transition: transform 0.3s;
-    margin: auto;
-    color: #ffffff;
-}
-.cer-card.active {
-    display: block;
-}
-.cert-card:hover {
-    transform: scale(1.05);
-}
 
-.cert-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 10px;
-}
 /* RESUME */
 iframe {
     border: none;
@@ -243,13 +205,10 @@ footer {
 <div class="hero" id="home">
     <div class="hero-text">
         <h1>Hello, I'm <span>Sangeetha</span></h1>
-    
-        <p style = "color: #ffa500>
+        <p>
             Cloud computing Ethusiast<br>
             Data Analysis learner <br>
             Future Tech Professional<br>
-            I am passionate about cloud technologies and data-driven solutions.
-            </div>
         </p>
         <a href="#about" class="btn">More About Me</a>
     </div>
@@ -307,34 +266,20 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
         </div>
 </div>
 </section>
-
-
 <!-- CERTIFICATES -->
 <section>
 <h2>Certificates</h2>
- <ul>
-        <li>
-            <a href="certificates/cloud-computing.pdf" target="_blank">
-                Cloud Computing Certification
-                  <h3>Cloud Computing</h3>
-        <p>NPTEL Certification</p>
-            </a>
-        </li>
+ <h3>Cloud Computing</h3>
+    <p>NPTEL Certification</p>
+    <a href="certificates/cloud-computing.pdf" target="_blank" class="btn">
+        View Certificate
+    </a>
 
-        <li>
-            <a href="certificates/data-analysis.pdf" target="_blank">
-                Data Analysis Certification
-                 <h3>Simplilearn</h3>
-            </a>
-        </li>
-    </ul>
-
-  
-       
-       
-    </div>
-</div>
-</section>
+    <h3 style="margin-top:30px;">Data Analysis</h3>
+    <p>Simplilearn Certification</p>
+    <a href="certificates/data-analysis.pdf" target="_blank" class="btn">
+        View Certificate
+    </a>
 </section>
 <!-- RESUME SECTION -->
 <section id="resume">
