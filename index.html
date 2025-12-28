@@ -143,6 +143,53 @@ section p {
     font-size: 14px;
     color: #000000;
 }
+/* PROJECT SECTION */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-card {
+    background: #2a2a2a;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 380px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.project-card h3 {
+    color: #76ffc8;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #ffb6c1;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    margin: 15px 0;
+}
+
+.tech-stack span {
+    background: #ff9068;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    margin: 4px;
+    display: inline-block;
+}
+    
+    
 /* RESUME */
 iframe {
     border: none;
@@ -247,6 +294,44 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
         View Certificate
     </a>
 </section>
+<!-- PROJECT -->
+<section id="project">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>ECO-BREEZE POLE</h3>
+
+            <p>
+                ECO-BREEZE POLE is an innovative smart street pole designed for
+                sustainable development. It integrates solar-powered lighting,
+                air purification through vertical gardens, EV charging, and
+                smart irrigation support for nearby crops.
+            </p>
+
+            <p>
+                Proposed for <b>Smart India Hackathon 2025</b>, this project
+                focuses on clean & green technology to improve community
+                well-being and support farmers.
+            </p>
+
+            <div class="tech-stack">
+                <span>IoT</span>
+                <span>Python</span>
+                <span>AI / ML</span>
+                <span>Solar Energy</span>
+                <span>Cloud</span>
+            </div>
+
+            <a href="Sustainable sparks.pdf" target="_blank" class="btn">
+                View Project PDF
+            </a>
+        </div>
+
+    </div>
+</section>
+
 <!-- RESUME SECTION -->
 <section id="resume">
 <h2>My Resume</h2>
