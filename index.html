@@ -300,7 +300,8 @@ footer {
 </div>
     </section>
 <!-- ABOUT -->
-<div class="main-section">
+<section id="about" class="page">
+   <div class="main-section">
   <nav class="sidebar">
     <!-- menu items -->
   </nav>
@@ -327,7 +328,7 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
     <img src="cloud.png" alt="Cloud Computing">
     <p>Cloud Computing</p>
         </div>
-        <div class="skill" class="page">
+        <div class="skill">
             <img src="data.png" alt="Data Analysis">
             <p>Data Analysis</p>
         </div>
@@ -353,7 +354,7 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 </div>
 </section>
 <!-- CERTIFICATES -->
-<section>
+<section class="page">
 <h2>Certificates</h2>
  <h3>Cloud Computing</h3>
     <p>NPTEL Certification</p>
@@ -434,7 +435,7 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
     
 
 <!-- RESUME SECTION -->
-<section id="resume">
+<section id="resume" class="page">
 <h2>My Resume</h2>
 <p>You can view or download my resume below.</p>
 <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
@@ -450,14 +451,6 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 </section>
 <footer>
 © 2025 Sangeetha | Portfolio
-</footer>
- <script>
-function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(page => {
-        page.classList.remove('active');
-    });
-    document.getElementById(pageId).classList.add('active');
-}
-</script>     
+</footer>    
 </body>
 </html>
