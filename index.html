@@ -40,6 +40,9 @@ nav a:hover {
     padding-top: 80px 40px;
     background : linear-gradient(#1c1c1c, #1c1c1c);
     flex-wrap: wrap;
+    min-height: calc(100vh - 120px); 
+    padding-bottom: 100px;
+     margin-bottom: 80px;
 }
 .hero-text h1  {
     color: #ffffff;
@@ -103,6 +106,7 @@ section {
     color:#ffffff;
     padding: 70px 40px;
     text-align: left;
+    scroll-margin-top: 160px;
 }
 section h2 {
     margin-bottom: 140px;
@@ -116,15 +120,16 @@ section p {
 }
 /* ABOUT - Right alingned*/
 #about {
-    text-align: left;}
+    text-align: left;
+    padding-top: 140px;
+    margin-top: -140px;
+    position: relative;
+    z-index: 1;
+}
 #about p {
     margin-left: 0;
 }
-    #about {
-    padding-top: 140px;
-    margin-top: -140px;
-}
-
+    
 /* SKILLS */
 .skills-container {
     display: flex;
