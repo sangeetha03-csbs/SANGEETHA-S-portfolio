@@ -15,10 +15,12 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 40px 60px;
+    align-items: center;
+    padding: 30px 60px;
     position: sticky;
     top: 0;
     background: #1c1c1c;
+    z-index: 100;
 }
 nav {
     display: flex;
@@ -28,11 +30,24 @@ nav a{
     color: #76ffc8;
     text-decoration: none;
     font-size:25px;
+    margin-left: 25px;
+    cursor: pointer;
+    
 }
 nav a:hover {
     color: #ff6f91;
 }
-/* HERO */
+    /* COMMON PAGE STYLE */
+.page {
+    display: none;
+    padding: 80px 40px;
+    min-height: 100vh;
+}
+
+.page.active {
+    display: block;
+}
+/* HOME*/
 .hero {
     display: flex;
     align-items: center;
@@ -48,10 +63,16 @@ nav a:hover {
     color: #ffffff;
     font-size: 50px;
 }
-.hero-text h1  span {
+.hero h1  span {
     color: #ff9068;
     font-size: 50px;
     margin: 10px 0 20px;
+}
+.hero img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 4px solid #ff6f91;
 }
 .hero-text span {
     color: #ff6f91;
@@ -259,11 +280,11 @@ footer {
 <header>
     <h2 class ="portfolio-title">portfolio</h2>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#project">Project</a>
-        <a href="#contact">Contact</a>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('about')">About</a>
+        <a onclick="showPage('skills')">Skills</a>
+        <a onclick="showPage('project')">Project</a>
+        <a onclick="showPage('contact')">Contact</a>
     </nav>
 </header>
 <!-- HERO -->
@@ -275,7 +296,7 @@ footer {
             Data Analysis learner <br>
             Future Tech Professional<br>
         </p>
-        <a href="#about" class="btn">More About Me</a>
+        <a class="btn" onclick="showPage('about')">More About Me</a>
     </div>
     <img src="profile.jpg" alt="profile Image">
 </div>
@@ -302,9 +323,9 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 <section id="skills">
 <h2>Skills</h2>
     <div class="skills-container">
-        <div class="skill">
-            <img src="cloud.png" alt="Cloud Computing">
-            <p>Cloud Computing</p>
+    <div class="skill">
+    <img src="cloud.png" alt="Cloud Computing">
+    <p>Cloud Computing</p>
         </div>
 
         <div class="skill">
@@ -431,5 +452,13 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 <footer>
 © 2025 Sangeetha | Portfolio
 </footer>
+ <script>
+function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+}
+</script>     
 </body>
 </html>
