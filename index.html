@@ -125,7 +125,7 @@ section {
     color:#ffffff;
     padding: 70px 40px;
     text-align: left;
-    scroll-margin-top: 160px;
+    scroll-margin-top: 140px;
 }
 section h2 {
     margin-bottom: 20px;
@@ -172,9 +172,6 @@ section p {
     padding: 20px;
      margin-bottom: 50px;
 }
-
-   
-    
 /* SKILLS */
 .skills-container {
     display: flex;
@@ -185,7 +182,7 @@ section p {
     background: #dfff00;
     padding: 15px 25px;
     border-radius: 25px;
-    colour: #ff6f91;
+    color: #ff6f91;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -278,11 +275,12 @@ footer {
 <header>
     <h2 class="portfolio-title">portfolio</h2>
    <nav>
-        <a onclick="showPage('home')">Home</a>
-        <a onclick="showPage('about')">About</a>
-        <a onclick="showPage('skills')">Skills</a>
-        <a onclick="showPage('project')">Project</a>
-        <a onclick="showPage('contact')">Contact</a>
+       <div class="hero" id="home"></div>
+<section id="about"></section>
+<section id="skills"></section>
+<section id="project"></section>
+<section id="contact"></section>
+
     </nav>
 </header>
 <!--HERO-->
@@ -300,13 +298,13 @@ footer {
 </div>
     </section>
 <!-- ABOUT -->
-<section id="about" class="page">
+<section id="about">
    <div class="main-section">
   <nav class="sidebar">
     <!-- menu items -->
   </nav>
   <div class="about-container">
-<section id="about" class="page" >
+<section id="about">
 <h2>About Me</h2>
 <p>I am Sangeetha, currently pursuing my second year in Computer Science and Business Systems (CSBS) at Jerusalem College of Engineering.
 I am a passionate cloud Computing and Data Analysis learner with a strong interest in building scalable, data-driven solutions. 
@@ -321,7 +319,7 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 </p>
 </section>
 <!-- SKILLS -->
-<section id="skills" class="page">
+<section id="skills">
 <h2>Skills</h2>
     <div class="skills-container">
     <div class="skill">
@@ -435,14 +433,14 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
     
 
 <!-- RESUME SECTION -->
-<section id="resume" class="page">
+<section id="resume">
 <h2>My Resume</h2>
 <p>You can view or download my resume below.</p>
 <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
-<a href="resume.pdf" dowload class="btn"> Download Resume</a>
+<a href="resume.pdf" download class="btn"> Download Resume</a>
 </section>
 <!-- CONTACT -->
-<section id="contact" class="contact page">
+<section id="contact">
 <h2>Contact</h2>
 <p>Email: <a href="mailto:sangeetha030107@gmail.com">sangeetha030107@gmail.com</a></p>
 <p>GitHub: <a href="https://sangeetha03-csbs.github.io/SANGEETHA-S-portfolio/" target="_blank">Open GitHub</a></p>
