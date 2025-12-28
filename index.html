@@ -55,8 +55,11 @@ nav a:hover {
     margin-bottom: 80px; 
     flex-wrap: wrap;
 }
-.hero-text h1 
-    { color: #ffffff; font-size: 50px; }
+.hero-text  
+    { color: #ffffff; 
+      font-size: 50px;
+      max-width: 500px;
+    }
 
 .hero h1  span {
     color: #ff9068;
@@ -125,7 +128,7 @@ section {
     scroll-margin-top: 160px;
 }
 section h2 {
-    margin-bottom: 140px;
+    margin-bottom: 20px;
     color: #ff9068;
 }
 section p {
@@ -273,8 +276,8 @@ footer {
 </head>
 <body>
 <header>
-    <h2 class ="color:#ff9800;">portfolio</h2>
-    <nav>
+    <h2 class="portfolio-title">portfolio</h2>
+   <nav>
         <a onclick="showPage('home')">Home</a>
         <a onclick="showPage('about')">About</a>
         <a onclick="showPage('skills')">Skills</a>
@@ -284,7 +287,7 @@ footer {
 </header>
 <!--HERO-->
 <div class="hero page active" id="home">
-    <div class="hero">
+    <div class="hero-text">
         <h1>Hello, I'm <span>Sangeetha</span></h1>
         <p>
             Cloud computing Ethusiast<br>
@@ -317,10 +320,10 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 </p>
 </section>
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="page">
 <h2>Skills</h2>
     <div class="skills-container">
-    <div class="skill" class="page">
+    <div class="skill">
     <img src="cloud.png" alt="Cloud Computing">
     <p>Cloud Computing</p>
         </div>
