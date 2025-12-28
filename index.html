@@ -22,10 +22,6 @@ header {
     background: #1c1c1c;
     z-index: 100;
 }
-nav {
-    display: flex;
-    gap: 30px;
-}
 nav a{
     color: #76ffc8;
     text-decoration: none;
@@ -37,7 +33,7 @@ nav a{
 nav a:hover {
     color: #ff6f91;
 }
-    /* COMMON PAGE STYLE */
+/* COMMON PAGE STYLE */
 .page {
     display: none;
     padding: 80px 40px;
@@ -52,17 +48,9 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-top: 80px 40px;
-    background : linear-gradient(#1c1c1c, #1c1c1c);
     flex-wrap: wrap;
-    min-height: calc(100vh - 120px); 
-    padding-bottom: 100px;
-     margin-bottom: 80px;
 }
-.hero-text h1  {
-    color: #ffffff;
-    font-size: 50px;
-}
+
 .hero h1  span {
     color: #ff9068;
     font-size: 50px;
@@ -278,7 +266,7 @@ footer {
 </head>
 <body>
 <header>
-    <h2 class ="portfolio-title">portfolio</h2>
+    <h2 class ="color:#ff9800;">portfolio</h2>
     <nav>
         <a onclick="showPage('home')">Home</a>
         <a onclick="showPage('about')">About</a>
@@ -287,9 +275,9 @@ footer {
         <a onclick="showPage('contact')">Contact</a>
     </nav>
 </header>
-<!-- HERO -->
-<div class="hero" id="home">
-    <div class="hero-text">
+<!-- HOME -->
+<div class="home" class="page active" id="home">
+    <div class="hero">
         <h1>Hello, I'm <span>Sangeetha</span></h1>
         <p>
             Cloud computing Ethusiast<br>
@@ -300,6 +288,7 @@ footer {
     </div>
     <img src="profile.jpg" alt="profile Image">
 </div>
+    </section>
 <!-- ABOUT -->
 <div class="main-section">
   <nav class="sidebar">
@@ -312,6 +301,7 @@ footer {
 I am a passionate cloud Computing and Data Analysis learner with a strong interest in building scalable, data-driven solutions. 
 I enjoy exploring cloud technologies, analyzing data, and continuously improving my technical skills.
 </p>
+
 <p>
      My goal is to grow as a future tech professional by gaining hands-on
     experience, solving real-world problems, and contributing to innovative
