@@ -21,8 +21,7 @@ header {
     background: #1c1c1c;
     z-index: 100;
 }
-    .portfolio-title {
-    color: #ff9800;
+nav { display: flex; gap: 30px; }
 nav a{
     color: #76ffc8;
     text-decoration: none;
@@ -56,14 +55,14 @@ nav a:hover {
     margin-bottom: 80px; 
     flex-wrap: wrap;
 }
-.hero-text h1
+.hero-text  
     { color: #ffffff; 
       font-size: 50px;
       max-width: 500px;
     }
 
-.hero-text span {
-    color: #ff6f91;
+.hero h1  span {
+    color: #ff9068;
     font-size: 50px;
     margin: 10px 0 20px;
 }
@@ -73,6 +72,12 @@ nav a:hover {
     border-radius: 50%;
     border: 4px solid #ff6f91;
 }
+.hero-text span {
+    color: #ff6f91;
+}
+    .portfolio-title {
+        color: #ff9800;
+    }
 .typing {
     font-size: 40px;
     margin: 10px 0 20px;
@@ -95,12 +100,25 @@ nav a:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(ff6f91);
 }
-        
 .resume-btn {
     background: #ff3333;
 }
 .resume-btn:hover {
     background: #836fff;
+}
+/* IMAGE */
+.hero img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff6f91;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 /* SECTIONS */
 section {
@@ -121,8 +139,42 @@ section p {
 }
 .main-section {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* space between menu and content */
 }
+
+    
+/* ABOUT - Right alingned*/
+#about {
+    text-align: left;
+    padding-top: 140px;
+    margin-top: -140px;
+    position: relative;
+    z-index: 1;
+    margin-top: 80px;
+}
+#about p {
+    margin-left: 0;
+}
+ .about-text {
+    line-height: 1.5; 
+     margin: 0;        
+    padding: 0;
+}
+.about-container {
+    max-width: 800px; /* or 70% */
+    margin-left: 20px; /* space from menu */
+    color: #fff;
+}
+.about-me {
+    max-height: none;       
+    height: auto;           
+    overflow: visible;      
+    padding: 20px;
+     margin-bottom: 50px;
+}
+
+   
+    
 /* SKILLS */
 .skills-container {
     display: flex;
@@ -185,9 +237,11 @@ section p {
     font-size: 15px;
     line-height: 1.6;
 }
+
 .tech-stack {
     margin: 15px 0;
 }
+
 .tech-stack span {
     background: #ff9068;
     color: #000;
@@ -197,68 +251,8 @@ section p {
     margin: 4px;
     display: inline-block;
 }
-/* CONTACT */
-.contact a {
-    color: #76ff9f;
-    text-decoration: none;
-    }
-/* FOOTER */
-footer {
-    padding: 20px;
-    background: rgba(0,0,0,0.8);
-}
-/* IMAGE */
-.hero img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ff6f91;
-    animation: float 3s ease-in-out infinite;
-}
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-   
-/* ABOUT - Right alingned*/
-#about {
-    text-align: left;
-    padding-top: 140px;
-    margin-top: -140px;
-    position: relative;
-    z-index: 1;
-    margin-top: 80px;
-}
-#about p {
-    margin-left: 0;
-}
- .about-text {
-    line-height: 1.5; 
-     margin: 0;        
-    padding: 0;
-}
-.about-container {
-    max-width: 800px; /* or 70% */
-    margin-left: 20px; /* space from menu */
-    color: #fff;
-}
-.about-me {
-    max-height: none;       
-    height: auto;           
-    overflow: visible;      
-    padding: 20px;
-     margin-bottom: 50px;
-}
-/* ===== FOOTER ===== */
-footer {
-    padding: 20px;
-    text-align: center;
-    background: #000;
-}
-
-
+    
+    
 /* RESUME */
 iframe {
     border: none;
@@ -267,12 +261,22 @@ iframe {
     padding-top: 140px;
     margin-top: -140px;
 }
-
+/* CONTACT */
+.contact a {
+    color: #76ff9f;
+    text-decoration: none;
+    
+}
+/* FOOTER */
+footer {
+    padding: 20px;
+    background: rgba(0,0,0,0.8);
+}
 </style>
 </head>
 <body>
 <header>
-    <h2 class="portfolio-title">Portfolio</h2>
+    <h2 class="portfolio-title">portfolio</h2>
    <nav>
         <a onclick="showPage('home')">Home</a>
         <a onclick="showPage('about')">About</a>
@@ -281,8 +285,8 @@ iframe {
         <a onclick="showPage('contact')">Contact</a>
     </nav>
 </header>
-<!--HOME-->
-<div id="home" class="hero page active" >
+<!--HERO-->
+<div class="hero page active" id="home">
     <div class="hero-text">
         <h1>Hello, I'm <span>Sangeetha</span></h1>
         <p>
@@ -292,15 +296,20 @@ iframe {
         </p>
         <a class="btn" onclick="showPage('about')">More About Me</a>
     </div>
-    <img src="profile.jpg" alt="Profile">
+    <img src="profile.jpg" alt="profile Image">
 </div>
-    
+    </section>
 <!-- ABOUT -->
 <section id="about" class="page">
+   <div class="main-section">
+  <nav class="sidebar">
+    <!-- menu items -->
+  </nav>
+  <div class="about-container">
+<section id="about" class="page" >
 <h2>About Me</h2>
 <p>I am Sangeetha, currently pursuing my second year in Computer Science and Business Systems (CSBS) at Jerusalem College of Engineering.
-</p>
-<p>I am a passionate cloud Computing and Data Analysis learner with a strong interest in building scalable, data-driven solutions. 
+I am a passionate cloud Computing and Data Analysis learner with a strong interest in building scalable, data-driven solutions. 
 I enjoy exploring cloud technologies, analyzing data, and continuously improving my technical skills.
 </p>
 
@@ -315,7 +324,10 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 <section id="skills" class="page">
 <h2>Skills</h2>
     <div class="skills-container">
-        <div class="skill"><img src="cloud.png" alt="Cloud Computing"> <p>Cloud Computing</p> </div>
+    <div class="skill">
+    <img src="cloud.png" alt="Cloud Computing">
+    <p>Cloud Computing</p>
+        </div>
         <div class="skill">
             <img src="data.png" alt="Data Analysis">
             <p>Data Analysis</p>
@@ -340,6 +352,20 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
             <p>GitHub</p>
         </div>
 </div>
+</section>
+<!-- CERTIFICATES -->
+<section class="page">
+<h2>Certificates</h2>
+ <h3>Cloud Computing</h3>
+    <p>NPTEL Certification</p>
+    <a href="cloud-computing.pdf" target="_blank" class="btn">
+        View Certificate
+    </a>
+    <h4>Data Analysis</h4>
+    <p>Simplilearn Certification</p>
+    <a href="data-analysis.pdf" target="_blank" class="btn">
+        View Certificate
+    </a>
 </section>
 <!-- PROJECT -->
 <section id="project" class="page">
@@ -406,21 +432,7 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
         View Project PDF
     </a>
 </div>
-<!-- CERTIFICATES -->
-<section class="page">
-<h2>Certificates</h2>
- <h3>Cloud Computing</h3>
-    <p>NPTEL Certification</p>
-    <a href="cloud-computing.pdf" target="_blank" class="btn">
-        View Certificate
-    </a>
-    <h4>Data Analysis</h4>
-    <p>Simplilearn Certification</p>
-    <a href="data-analysis.pdf" target="_blank" class="btn">
-        View Certificate
-    </a>
-</section>
-
+    
 
 <!-- RESUME SECTION -->
 <section id="resume" class="page">
@@ -439,6 +451,7 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 </section>
 <footer>
 © 2025 Sangeetha | Portfolio
-</footer> 
+</footer>    
 </body>
 </html>
+
