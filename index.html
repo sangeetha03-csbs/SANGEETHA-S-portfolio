@@ -15,13 +15,12 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 30px 60px;
     position: sticky;
     top: 0;
     background: #1c1c1c;
-    z-index: 100;
 }
+nav { display: flex; gap: 30px; }
 nav a{
     color: #76ffc8;
     text-decoration: none;
@@ -43,13 +42,20 @@ nav a:hover {
 .page.active {
     display: block;
 }
-/* HOME*/
+/* HERO*/
 .hero {
     display: flex;
     align-items: center;
+    padding-top: 80px 40px; 
+    background : linear-gradient(#1c1c1c, #1c1c1c);
     justify-content: space-around;
+    min-height: calc(100vh - 120px); 
+    padding-bottom: 100px; 
+    margin-bottom: 80px; 
     flex-wrap: wrap;
 }
+.hero-text h1 
+    { color: #ffffff; font-size: 50px; }
 
 .hero h1  span {
     color: #ff9068;
@@ -275,8 +281,8 @@ footer {
         <a onclick="showPage('contact')">Contact</a>
     </nav>
 </header>
-<!-- HOME -->
-<div class="home" class="page active" id="home">
+<!--HERO-->
+<div class="hero page active" id="home">
     <div class="hero">
         <h1>Hello, I'm <span>Sangeetha</span></h1>
         <p>
@@ -295,7 +301,7 @@ footer {
     <!-- menu items -->
   </nav>
   <div class="about-container">
-<section id="about">
+<section id="about" class="page" >
 <h2>About Me</h2>
 <p>I am Sangeetha, currently pursuing my second year in Computer Science and Business Systems (CSBS) at Jerusalem College of Engineering.
 I am a passionate cloud Computing and Data Analysis learner with a strong interest in building scalable, data-driven solutions. 
@@ -313,12 +319,11 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 <section id="skills">
 <h2>Skills</h2>
     <div class="skills-container">
-    <div class="skill">
+    <div class="skill" class="page">
     <img src="cloud.png" alt="Cloud Computing">
     <p>Cloud Computing</p>
         </div>
-
-        <div class="skill">
+        <div class="skill" class="page">
             <img src="data.png" alt="Data Analysis">
             <p>Data Analysis</p>
         </div>
@@ -358,7 +363,7 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
     </a>
 </section>
 <!-- PROJECT -->
-<section id="project">
+<section id="project" class="page">
     <h2>Projects</h2>
 
     <div class="projects-container">
@@ -432,7 +437,7 @@ I enjoy exploring cloud technologies, analyzing data, and continuously improving
 <a href="resume.pdf" dowload class="btn"> Download Resume</a>
 </section>
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<section id="contact" class="contact page">
 <h2>Contact</h2>
 <p>Email: <a href="mailto:sangeetha030107@gmail.com">sangeetha030107@gmail.com</a></p>
 <p>GitHub: <a href="https://sangeetha03-csbs.github.io/SANGEETHA-S-portfolio/" target="_blank">Open GitHub</a></p>
